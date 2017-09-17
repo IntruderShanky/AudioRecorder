@@ -8,7 +8,10 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
+import com.islabs.recorderdialog.OnRecordListener;
 import com.islabs.recorderdialog.RecorderDialog;
+
+import java.io.File;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -38,6 +41,28 @@ public class MainActivity extends AppCompatActivity {
     public void getAudio(View view) {
         RecorderDialog dialog = RecorderDialog.getInstance(getExternalCacheDir().getPath() + "/my_recorded_audio.mp3");
         dialog.show(getFragmentManager(), "Audio Recorder");
+
+        dialog.setOnRecordListener(new OnRecordListener() {
+            @Override
+            public void onRecorded(File file) {
+
+            }
+
+            @Override
+            public void onError(Exception e) {
+
+            }
+
+            @Override
+            public void onDialogDismiss() {
+
+            }
+
+            @Override
+            public void onPositiveButtonClick() {
+
+            }
+        });
     }
 
 }
