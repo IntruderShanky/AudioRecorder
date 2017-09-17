@@ -16,7 +16,7 @@ allprojects {
 Step 2. Add the dependency
 ```groovy
 dependencies {
-  compile 'com.github.IntruderShanky:AudioRecorder:1.0'
+  compile 'com.github.IntruderShanky:AudioRecorder:1.1'
  }
  ```
 
